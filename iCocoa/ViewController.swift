@@ -124,5 +124,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         priorityTextField.text = "\(selectedToDo!.priorityLevel)"
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("About to Delete")
+            let toDoToDelete = toDoArray[indexPath.row]
+            toDoToDelete.deleteInBackground(block: { (success, error) in
+                print("Deleted")
+                self.fetchToDos()
+            })
+        }
+    }
+    
 }
 
