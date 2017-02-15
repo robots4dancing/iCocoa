@@ -25,11 +25,21 @@ class ViewController: UIViewController {
     func save(toDo: ToDoItem) {
         toDo.saveInBackground { (success, error) in
             print("Object Saved")
+            self.fetchToDos()
         }
     }
     
     @IBAction func addToDo(button: UIButton) {
         let toDo = ToDoItem(desc: descTextField.text!, priority: Int(priorityTextField.text!)!)
+        save(toDo: toDo)
+    }
+    
+    @IBAction func updateToDo(button: UIButton) {
+        guard let toDo = selectedToDo else {
+            return
+        }
+        toDo.itemDesc = descTextField.text!
+        toDo.priorityLevel = Int(priorityTextField.text!)!
         save(toDo: toDo)
     }
     
