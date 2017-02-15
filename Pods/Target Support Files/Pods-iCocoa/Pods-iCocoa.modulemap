@@ -1,0 +1,6 @@
+framework module Pods_iCocoa {
+  umbrella header "Pods-iCocoa-umbrella.h"
+
+  export *
+  module * { export * }
+}

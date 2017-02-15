@@ -1,0 +1,18 @@
+PODS:
+  - Bolts/Tasks (1.8.4)
+  - ConfettiView (0.1.7)
+  - Parse (1.14.2):
+    - Bolts/Tasks (~> 1.8)
+
+DEPENDENCIES:
+  - ConfettiView
+  - Parse
+
+SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  ConfettiView: e70aa9be11d778d2c2778429aad92fa6f5d9c6e7
+  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
+
+PODFILE CHECKSUM: 19916aec6dfa125077553a1d12a07658eff5882d
+
+COCOAPODS: 1.2.0
